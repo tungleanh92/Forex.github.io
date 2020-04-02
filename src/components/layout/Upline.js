@@ -35,7 +35,7 @@ const Upline = () => {
                             onClick={showMenu}
                         ><i className="fas fa-bars"></i></span>
                         <div className="logo">
-                            <Link exact="true" to='/'>
+                            <Link exact to='/'>
                                 <img src="./../../../static/images/logo.png" />
                             </Link>
                         </div>

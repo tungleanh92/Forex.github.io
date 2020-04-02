@@ -22,7 +22,7 @@ const Header = ({ history }) => {
                         <div className="tab-control">
                             <div className="bg">
                                 <ul className={`menu ${showMenu !== true ? "act" : "deact"}`}>
-                                    <li><NavLink exact={true} to='/'>HOME</NavLink></li>
+                                    <li><NavLink exact to='/'>HOME</NavLink></li>
                                     <li><NavLink to='/about'>ABOUT US</NavLink></li>
                                     <li><NavLink to='/trading'>TRADING</NavLink></li>
                                 </ul>
