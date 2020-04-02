@@ -1,0 +1,138 @@
+@font-face {
+    font-family: 'SVN-Gilroy Bold';
+    src: local('SVN-Gilroy Bold'), url('./../../../fonts/SVNGilroy\ Bold.woff') format('woff');
+}
+
+.range {
+    margin-top: 21px;
+    margin-bottom: -95px;
+
+    h2 {
+        font-size: 52px;
+        color: #4c4c4c;
+        font-family: 'SVN-Gilroy Bold';
+        letter-spacing: -1px;
+        margin-bottom: 63px;
+    }
+
+    p {
+        font-size: 20px;
+        line-height: 36px;
+        margin-bottom: 40px;
+    }
+
+.pos {
+    display: contents;
+}
+
+.neg {
+    display: none;
+}
+
+table {
+    width: 100%;
+    text-align: center;
+
+    .toggle1 {
+        background-color: #f2f2f2;
+        .content {
+            max-width: unset;
+            text-align: left;
+            padding: 37px 54px;
+
+            p:nth-child(1) {
+                font-weight: bolder;
+                font-size: 28px;
+                color: #ed1c24;
+            }
+
+            p:nth-child(2) {
+                font-size: 21px;
+            }
+        }
+    }
+
+    tr {
+        td {
+            width: 180px;
+            height: 284px;
+            div {
+                max-width: 100px;
+                margin: 0 auto;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+
+        td:hover {
+            background-color: #f2f2f2;
+        }
+
+        .euro {
+            border-right: 1px solid #e5e5e5;
+            border-bottom: 1px solid #e5e5e5;
+        }
+        .fence {
+            border-right: 1px solid #e5e5e5;
+            border-bottom: 1px solid #e5e5e5;
+        }
+        .box {
+            border-right: 1px solid #e5e5e5;
+            border-bottom: 1px solid #e5e5e5;
+        }
+        .cart {
+            border-bottom: 1px solid #e5e5e5;
+        }
+        .certificate {
+            border-right: 1px solid #e5e5e5;
+        }
+        .bitcoin {
+            border-right: 1px solid #e5e5e5;
+        }
+        .sandclock {
+            border-right: 1px solid #e5e5e5;
+        }
+    }
+}
+}
+
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+    .range {
+        table {
+            tbody {
+                tr {
+                    td {
+                        height: 180px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 767px) {
+    .range {
+        margin-top: 80px;
+        table {
+            tbody {
+                tr {
+                    td {
+                        height: 110px;
+                        div {
+                            max-width: 70px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .range table .toggle1 .content {
+        padding: 30px 10px;
+    }
+
+    .range p {
+        margin-bottom: 20px;
+    }
+}

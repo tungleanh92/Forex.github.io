@@ -1,0 +1,195 @@
+* {
+    padding: 0;
+    margin: 0;
+    color: #4c4c4c;
+}
+
+@font-face {
+    font-family: 'SVN-Gilroy Bold';
+    src: local('SVN-Gilroy Bold'), url('./../../../fonts/SVNGilroy\ Bold.woff') format('woff');
+}
+
+.Footer {
+    background-color: #f2f2f2;
+    padding-top: 30px;
+    padding-bottom: 100px;
+    position: relative;
+    z-index: -2;
+
+    .poly-wrap-footer {
+        filter: drop-shadow(0px 0px 10px rgba(0,0,0,1));
+      }
+      .poly {
+        background: white;
+        clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        position: absolute;
+        transform: rotate(103deg);
+        left: -140px;
+        top: -160px;
+        width: 300px;
+        height: 300px;
+      }
+}
+
+.part1 {
+    width: 100%;
+    position: relative;
+
+    .logos {
+        float: left;
+        display: flex;
+        color: #4c4c4c;
+        font-size: 13.7px;
+
+        div {
+            margin-right: 40px;
+        }
+        p {
+            margin-top: 5px;
+            font-size: 15px;
+        }
+
+        p:nth-child(2) {
+            margin-right: 28px;
+            margin-top: 5px;
+            font-size: 15px;
+        }
+
+        p:nth-child(3) {
+            margin-right: 28px;
+            margin-top: 5px;
+            font-size: 15px;
+        }
+    }
+
+    .links {
+        float: right;
+        margin-right: 41px;
+        margin-top: 5px;
+
+        li {
+            display: inline-block;
+            margin: 0 20px;
+        }
+    }
+}
+
+
+.part2 {
+    position: relative;
+    hr {
+        margin-top: 15px;
+        margin-bottom: 35px;
+        border: 0;
+        border-top: 1px solid #c9c9c9;
+    }
+
+    p:nth-child(1) {
+        font-size: 11.5px;
+        font-weight: bolder;
+        margin-bottom: 18px;
+        font-family: "SVN-Gilroy Bold";
+    }
+
+    p:nth-child(2) {
+        text-align: justify;
+        font-size: 12px;
+        line-height: 18.6px;
+    }
+}
+
+.part3 {
+    hr {
+        margin-top: 52px;
+        margin-bottom: 20px;
+        border: 0;
+        border-top: 1px solid #c9c9c9;
+    }
+
+    width: 100%;
+
+    p {
+        font-size: 12px;
+        font-weight: bolder;
+        font-family: "SVN-Gilroy Bold";
+        margin-bottom: 26px;
+    }
+
+    .content {
+        display: flex;
+
+        .img-cnt {
+            margin-right: 15px;
+        }
+
+        .cnt {
+            p:nth-child(1) {
+                color: #4c4c4c;
+                font-weight: bolder;
+                font-size: 12px;
+                margin-top: -3px;
+            }
+
+            p:nth-child(2) {
+                margin-top: -25px;
+            }
+        }
+    }
+}
+
+.part4 {
+    hr {
+        margin-top: -1px;
+        margin-bottom: 10px;
+        border: 0;
+        border-top: 1px solid #c9c9c9;
+    }
+    
+    p {
+        margin: 19px 0;
+        font-size: 12px;
+    }
+
+    .content-part4 p:nth-child(1) {
+        font-weight: bolder;
+        font-family: "SVN-Gilroy Bold";
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .Footer {
+        padding-bottom: 0px;
+        .part1 {
+            .logos {
+                div {
+                    display: none;
+                }
+
+                p {
+                    font-size: 12px;
+                }
+            }
+
+            .links {
+                display: none;
+            }
+        }
+
+        .part3 {
+            .content {
+                display: unset;
+
+                .cnt {
+                    max-width: 200px;
+                    margin-top: 15px;
+                }
+            }
+        }
+
+        .part4 {
+            .rp {
+                display: none;
+            }
+        }
+    }
+}

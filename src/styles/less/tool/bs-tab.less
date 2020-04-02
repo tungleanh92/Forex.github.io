@@ -7,7 +7,6 @@
                 position: absolute;
                 right: 100%;
                 border-bottom: 0;
-                border-right: 2px solid green;
                 top: 0;
                 .control-list {
                     .control-list__item {
@@ -26,8 +25,11 @@
 
     }
     .tab-control {
-        border-bottom: 2px solid green;
         position: relative;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-left: auto;
+        margin-right: auto;
         .control__show {
             display: none;
         }
@@ -42,38 +44,29 @@
             }
             .control-list__item {
                 float: left;
-                min-width: 100px;
-                background: #fff;
-                padding: 5px 10px;
+                padding-right: 45px;
+                padding-left: 45px;
+                padding-top: 4px;
+                padding-bottom: 38px;
                 text-align: center;
-                border: 1px solid transparent;
-                color: #333;
-                font-size: 14px;
-                font-weight: bold;
+                color: #4c4c4c;
+                font-size: 17px;
                 position: relative;
-                border-top-left-radius: 15px;
-                border-top-right-radius: 15px;
                 cursor: pointer;
-                box-shadow: 0px 0 0px rgba(0, 0, 0, 0.4);
 
                 &:hover {
-                    background: #ccc;
-                    border: 1px solid #ccc;
+                    color: #000;
                 }
+
                 &.active {
-                    background: green;
-                    color: #fff;
-                    border: 1px solid green;
-                    box-shadow: 2px 1px 1px rgba(0, 0, 0, 0.4);
+                    color: #ed1c24;
                     z-index: 1;
-                    transition: all 0.3s ease;
+                    border-bottom: 4px solid #ed1c24;
                 }
 
             }
 
         }
-
-
 
     }
     .tab-content {
@@ -99,3 +92,60 @@
     transition: opacity 300ms, transform 300ms;
   }
 
+
+@media only screen and (max-width: 767px) {
+    .bs-tab {
+        .tab-control {
+            .act {
+                display: unset
+            }
+    
+            .deact {
+                display: none;
+            }
+            .control-list {
+                .control-list__item {
+                    padding-right: 25px;
+                    padding-left: 25px;
+                    padding-top: 4px;
+                    padding-bottom: 20px;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+  }
+
+  @media only screen and (max-width: 991px) and (min-width: 768px)  {
+    .bs-tab {
+        .tab-control {
+            .control-list {
+                .control-list__item {
+                    padding-right: 25px;
+                    padding-left: 25px;
+                    padding-top: 4px;
+                    padding-bottom: 30px;
+                    font-size: 17px;
+                }
+            }
+        }
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    .wrap .bs-tab .tab-control {
+        width: 750px;
+    }
+  }
+
+  @media only screen and (min-width: 992px) {
+    .wrap  .bs-tab .tab-control {
+        width: 970px;
+    }
+  }
+
+  @media only screen and (min-width: 1200px) {
+    .wrap  .bs-tab .tab-control  {
+        width: 1170px;
+    }
+  }

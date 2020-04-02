@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.Downline-sm {
+    display: none;
+}
+
+.Downline {
+    background-color: #000028;
+    padding: 9px;
+    position: fixed;
+    bottom: 0;
+    z-index: 10;
+    width: 100%;
+    box-sizing: border-box;
+    height: 60px;
+
+    .bs-row {
+        display: unset;
+
+        .exchange {
+            color: white;
+            float: left;
+            display: flex;
+
+            .green {
+                margin-right: 56px;
+                font-size: 13px;
+
+                p:nth-child(1) {
+                    margin-top: 2px;
+                    margin-bottom: 0px;
+                    color: white;
+                }
+
+                p:nth-child(2) {
+                    color: #39b44a;
+                }
+            }
+
+            .red {    
+                margin-right: 59px;
+                font-size: 13px;
+
+                p:nth-child(1) {
+                    margin-top: 2px;
+                    margin-bottom: 0px;
+                    color: white;
+                }
+
+                p:nth-child(2) {
+                    color: #ec1b24;
+                }
+            }
+            
+            .warn {
+                margin-left: 15px;
+
+                p {
+                    margin-bottom: 0px;
+                color: white;
+                    
+                }
+
+                p:nth-child(1) {
+                    font-weight: bolder;
+                color: white;
+                    
+                }
+            }
+        }
+
+        .trade-btn {
+            margin-right: 40px;
+            float: right;
+            font-size: 16px;
+    
+            .trade {
+                width: 140px;
+                height: 40px;
+                color: white;
+                background-color: #0984e3;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .Downline {
+        display: none;
+    }
+
+    .Downline-sm {
+        display: block;
+        background-color: #ec1b24;
+        color: white;
+        text-align: center;
+        font-size: 30px;
+        letter-spacing: 10px;
+        padding: 20px 0;
+    }
+
+    .Downline-sm:hover {
+        cursor: pointer;
+    }
+}

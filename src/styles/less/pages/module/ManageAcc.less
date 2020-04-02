@@ -1,0 +1,37 @@
+.manageacc{
+overflow: hidden;
+  .poly-wrap-sm {
+    filter: drop-shadow(0px 0px 10px rgba(0,0,0,0.4));
+  
+    .poly {
+        background: white;
+        clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        position: absolute;
+        transform: rotate(50deg);
+        top: 340px;
+        width: 200px;
+        left: 200px;
+        height: 225px;
+      }
+  }
+  
+  .poly-wrap-lg{
+    filter: drop-shadow(0px 0px 10px rgba(0,0,0,0.4));
+    .poly {
+        background: white;
+        clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        position: absolute;
+        transform: rotate(103deg);
+        left: 1065px;
+        top: 200px;
+        width: 300px;
+        height: 350px;
+      }
+  }
+}
+
+@media only screen and (max-width: 991px) {
+    .section-main::before {
+        background-image: unset;
+    }
+}

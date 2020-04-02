@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.Upline {
+    background-color: #000028;
+    padding: 8px;
+    margin-bottom: 32px;
+    position: relative;
+
+    .flex {
+        width: 100%;
+        display: flex;
+
+        .bars {
+            display: none;
+        }
+
+        .logo {
+            float: left;
+            width: 100%;
+        }
+
+        select {
+            float: right;
+            margin-right: 40px;
+            font-size: 16px;
+            background-color: #000028;
+            border: none;
+            color: white;
+            outline: none;
+            position: relative;
+        }
+
+        .en {
+            position: relative;
+            margin: 10px 0;
+        }
+
+        .vi {
+            position: relative;
+            margin: 10px 0;
+        }
+
+        .en::before {
+            background-image: url(./../../../../../static/images/eng.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            content: '';
+            position: absolute;
+            width: 31px;
+            height: 20px;
+            z-index: 1;
+            left: -40px;
+        }
+
+        .vi::before {
+            background-image: url(./../../../../../static/images/vi.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            content: '';
+            position: absolute;
+            width: 31px;
+            height: 20px;
+            z-index: 1;
+            left: -40px;
+        }
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .poly {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .Upline {
+        margin-bottom: unset;
+
+        .flex {
+            display: unset;
+
+            .bars {
+                display: unset;
+                position: absolute;
+                left: 40px;
+                top: 7px;
+                font-size: 30px;
+
+                i {
+                    color: white;
+                }
+            }
+
+            select {
+                margin-right: 0px;
+            }
+    
+            .en {
+                position: absolute;
+                right: 10px;
+                top: 20px;
+                margin: unset;
+            }
+    
+            .vi {
+                position: absolute;
+                right: 10px;
+                top: 20px;
+                margin: unset;
+            }
+    
+            .logo {
+                margin: 0 auto;
+                float: unset;
+                width: 98px;
+            }
+        }
+    }
+}

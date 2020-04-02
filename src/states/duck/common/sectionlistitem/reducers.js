@@ -1,16 +1,16 @@
-import * as Types from './types';
+import * as types from './types';
 
-var initialState = {
-    rowEditing: {},
-
-};
-
+var initialState = true;
 const reducer = (state = initialState, action) => {
     switch (action.type) {
+        case types.SHOW_MENU:
+            return !state;
+        case types.CLOSE_MENU:
+            state = false;
+            return state;
         default:
-            break;
+            return state
     }
-    return { ...state };
 }
 
 export default reducer

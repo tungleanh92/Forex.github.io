@@ -1,0 +1,87 @@
+@font-face {
+    font-family: 'SVN-Gilroy Bold';
+    src: local('SVN-Gilroy Bold'), url('./../../../fonts/SVNGilroy\ Bold.woff') format('woff');
+}
+
+.metatrader {
+    margin-top: 21px;
+    margin-bottom: -158px;
+    .meta-grp {
+        h2 {
+            font-size: 52px;
+            color: #4c4c4c;
+            font-family: 'SVN-Gilroy Bold';
+            letter-spacing: -1px;
+        }
+    
+        .btn-grp {
+            float: right;
+            display: flex;
+            font-size: 19px;
+            margin-top: -54px;
+            margin-right: 40px;
+
+            .signin {
+                border: 2px solid #ed1c24;
+                color: #ed1c24;
+                border-radius: 5px;
+                font-size: 16px;
+                padding: 10px 29px;
+            }
+    
+            .signin:hover {
+                cursor: pointer;
+            }
+    
+            .signup {
+                background-color: #0984e3;
+                color: white;
+                border-radius: 5px;
+                padding: 11px 45px;
+                margin-right: 19px;
+            }
+    
+            .signup:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    p {
+        float: left;
+        font-size: 21px;
+        margin-top: 55px;
+        margin-bottom: 45px;
+        line-height: 33px;
+    }
+
+    .meta-img {
+        max-width: 833px;
+        margin-left: auto;
+        margin-right: auto;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .detail {
+        text-align: center;
+        margin-top: 132px;
+
+        p {
+            float: left;
+            font-size: 16px;
+            margin-top: 14px;
+            margin-bottom: 45px;
+            line-height: 33px;
+            display: block;
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .metatrader{
+        margin-top: 80px;
+    }
+}

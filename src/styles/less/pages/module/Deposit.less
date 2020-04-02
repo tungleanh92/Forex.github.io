@@ -1,0 +1,178 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: 'SVN-Gilroy Bold';
+    src: local('SVN-Gilroy Bold'), url('./../../../fonts/SVNGilroy\ Bold.woff') format('woff');
+}
+
+.deposits {
+    margin-top: 21px;
+    margin-bottom: -134px;
+
+    h2 {
+        font-size: 52px;
+        color: #4c4c4c;
+        font-family: 'SVN-Gilroy Bold';
+        letter-spacing: -1px;
+        margin-bottom: 65px;
+    }
+
+    p {
+        font-size: 32px;
+        line-height: 36px;
+    }
+
+    .wrap {
+        margin-top: 62px;
+        padding-left: 210px;
+        position: relative;
+
+        p:nth-child(1) {
+            font-size: 26px;
+            font-weight: bolder;
+            margin-bottom: 0;
+        }
+
+        p:nth-child(2) {
+            font-size: 21px;
+        }
+    }
+
+    .wrap1:before {
+        position: absolute;
+        background-image: url(./../../../../../static/images/fast.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        content: '';
+        top: 4px;
+        left: 34px;
+        width: 129px;
+        height: 100px;
+    }
+
+    .wrap2:before {
+        position: absolute;
+        background-image: url(./../../../../../static/images/smile.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        content: '';
+        top: 4px;
+        left: 34px;
+        width: 101px;
+        height: 100px;
+    }
+
+    .nd {
+        margin-top: 171px;
+        margin-bottom: 70px;
+    }
+
+    table {
+        width: 100%;
+        text-align: center;
+
+        tr {
+            td {
+                width: 180px;
+                height: 284px;
+                div {
+                    max-width: 160px;
+                    margin: 0 auto;
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+
+            td:hover {
+                background-color: #f2f2f2;
+            }
+
+            .xetra {
+                border-right: 1px solid #e5e5e5;
+                border-bottom: 1px solid #e5e5e5;
+            }
+            .net {
+                border-right: 1px solid #e5e5e5;
+                border-bottom: 1px solid #e5e5e5;
+            }
+            .skrill {
+                border-right: 1px solid #e5e5e5;
+                border-bottom: 1px solid #e5e5e5;
+            }
+            .cash {
+                border-bottom: 1px solid #e5e5e5;
+            }
+            .card {
+                border-right: 1px solid #e5e5e5;
+            }
+            .web {
+                border-right: 1px solid #e5e5e5;
+            }
+            .visa {
+                border-right: 1px solid #e5e5e5;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+    .deposits {
+        table {
+            tbody {
+                tr {
+                    .rp {
+                        height: 180px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .deposits {
+        table {
+            tbody {
+                tr {
+                    .rp {
+                        height: 100px;
+                        width: 100px;
+
+                        div {
+                            max-width: 100px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .wrap {
+            padding-left: 140px;
+        }
+
+        .wrap1::before {
+            width: 70px;
+            height: 70px;
+        }
+
+        .wrap2::before {
+            width: 70px;
+            height: 70px;
+        }
+
+        .nd {
+            margin-top: 70px;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 767px) {
+    .deposits {
+        margin-top: 80px;
+    }
+}

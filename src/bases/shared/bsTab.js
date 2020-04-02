@@ -11,12 +11,14 @@ const ShowTab = (tabItems, keyword) => {
   }
   return html();
 };
+
 const BsTab = props => {
   const tabItemArr = [];
   for (var index in props) {
     tabItemArr.push(props[index]);
   }
   const [tabDefault, setTabDefault] = useState(tabItemArr[0].label);
+  
   return (
     <div className="bs-tab">
       <div className="tab-container">
@@ -38,15 +40,11 @@ const BsTab = props => {
           </ul>
         </div>
         <div className="tab-content">
-          <div className="tab-item">
-            {ShowTab(tabItemArr, tabDefault)}
-          </div>
+          <div className="tab-item">{ShowTab(tabItemArr, tabDefault)}</div>
         </div>
       </div>
     </div>
   );
 };
 export default BsTab;
-
-
 

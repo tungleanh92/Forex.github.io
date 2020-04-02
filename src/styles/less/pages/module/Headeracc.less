@@ -1,0 +1,147 @@
+.Header-acc {
+    position: relative;
+    .tab-control {
+        position: relative;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        .menu{
+            margin-bottom: 20px;
+            &:after,
+            &:before {
+                content: "";
+                display: table;
+            }
+            &:after {
+                clear: both;
+            }
+            li {
+                float: left;
+                padding-right: 50px;
+                padding-left: 50px;
+                padding-top: 4px;
+                padding-bottom: 38px;
+                text-align: center;
+                position: relative;
+                cursor: pointer;
+
+                a {
+                    color: #4c4c4c;
+                    font-size: 16px;
+                    position: relative;
+                }
+
+                a:visited {
+                    text-decoration: none;
+                }
+
+                .active {
+                    color: #ed1c24;
+                    z-index: 1;
+                }
+
+                .active::after {
+                    position: absolute;
+                    content: '';
+                    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+                    background-color: #ed1c24;
+                    bottom: -43px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 160px;
+                    height: 5px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .Header-acc {
+        .tab-control {
+            .act {
+                display: unset
+            }
+    
+            .deact {
+                display: none;
+            }
+
+        .menu {
+            background-color: #000028;
+            z-index: 10;
+            position: absolute;
+            width: 100%;
+            padding-left: 40px;
+            padding-top: 10px;
+            padding-right: 40px;
+            padding-bottom: 40px;
+            margin-left: -15px;
+            margin-top: unset;
+    
+            li {
+                border-bottom: 1px solid white;
+                text-align: left;
+                float: unset;
+                background: unset;
+                padding-bottom: 10px;
+                margin-top: 10px;
+                padding-right: 25px;
+                padding-left: 25px;
+                padding-top: 4px;
+                padding-bottom: 20px;
+                font-size: 16px;
+
+                a {
+                    color: white;
+                }
+
+                a:hover {
+                    color: wheat;
+                }
+            }
+        
+            li.active {
+                color: #ed1c24;
+                border-bottom: 1px solid white;
+            }
+        }
+    }
+    }
+}
+
+@media only screen and (max-width: 991px) and (min-width: 768px)  {
+    .Header-acc {
+        .tab-control {
+            .menu {
+                li {
+                    padding-right: 25px;
+                    padding-left: 25px;
+                    padding-top: 4px;
+                    padding-bottom: 30px;
+                    font-size: 17px;
+                }
+            }
+        }
+    }
+  }
+
+@media only screen and (min-width: 768px) {
+    .Header-acc .tab-control {
+        width: 750px;
+    }
+  }
+
+@media only screen and (min-width: 992px) {
+    .Header-acc .tab-control {
+        width: 970px;
+    }
+  }
+
+@media only screen and (min-width: 1200px) {
+    .Header-acc .tab-control  {
+        width: 1170px;
+    }
+  }

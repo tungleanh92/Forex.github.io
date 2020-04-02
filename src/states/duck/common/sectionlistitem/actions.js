@@ -1,7 +1,13 @@
-import * as Types from './types';
+import * as types from './types';
 
-import { DataService } from '@utils';
+export const showMenu = () => {
+    return {
+        type: types.SHOW_MENU
+    }
+}
 
-import { SubmissionApi } from '@constants/ApiConstants';
-
-
+export const closeMenu = () => {
+    return {
+        type: types.CLOSE_MENU
+    }
+}

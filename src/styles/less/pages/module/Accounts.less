@@ -1,0 +1,525 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: 'SVN-Gilroy Bold';
+    src: local('SVN-Gilroy Bold'), url('./../../../fonts/SVNGilroy\ Bold.woff') format('woff');
+}
+
+.types {
+    margin-top: 1;
+
+    h2 {
+        font-size: 52px;
+        color: #4c4c4c;
+        font-family: 'SVN-Gilroy Bold';
+        letter-spacing: -1px;
+    }
+
+    p {
+        font-size: 20px;
+        margin-top: 66px;
+        margin-bottom: -95px;
+    }
+    .create-acc {
+        display: none;
+    }
+    .create-acc-main{
+        .demo-acc {
+            box-shadow: 0px 0px 70px -30px rgba(0,0,0,0.75);
+            margin-top: 160px;
+            border-radius: 10px;
+            display: flex;
+
+            .head {
+                background-image: url(./../../../../../static/images/demo-acc.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+                color: white;
+                text-align: center;
+                font-size: 25px;
+                padding: 50px 0;
+                width: 280px;
+                height: 240px;
+
+                p {
+                    width: 100px;
+                    margin: 35px 75px;
+                    color: white;
+                    font-size: 24px;
+                }
+            }
+            
+            ul {
+                margin-top: 17px;
+
+                li {
+                    margin: 18px 75px;
+                    position: relative;
+                    font-size: 21px;
+                }
+
+                li:before {
+                    position: absolute;
+                    background-image: url(./../../../../../static/images/check-blue.png);
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    content: '';
+                    width: 14px;
+                    height: 15px;
+                    bottom: 8px;
+                    left: -25px;
+                }
+            }
+
+            .create {
+                border: 1px solid #2291e6;
+                color: #2291e6;
+                border-radius: 10px;
+                font-size: 19px;
+                text-align: center;
+                width: 240px;
+                height: 60px;
+                margin-top: 89px;
+                margin-right: auto;
+                margin-left: auto;
+                padding: 16px 0;
+            }
+
+            .create:hover {
+                cursor: pointer;
+            }
+        }
+
+        .live-acc {
+            box-shadow: 0px 0px 70px -30px rgba(0,0,0,0.75);
+            margin-top: 20px;
+            border-radius: 10px;
+            display: flex;
+
+            .head {
+                background-image: url(./../../../../../static/images/live-acc.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+                color: white;
+                text-align: center;
+                font-size: 25px;
+                padding: 50px 0;
+                width: 280px;
+                height: 240px;
+
+                p {
+                    width: 100px;
+                    margin: 35px 75px;
+                    color: white;
+                    font-size: 24px;
+                }
+            }
+
+            ul {
+                margin-top: 17px;
+
+                li {
+                    margin: 18px 75px;
+                    position: relative;
+                    font-size: 1;
+                }
+
+                li:before {
+                    position: absolute;
+                    background-image: url(./../../../../../static/images/check-red.png);
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    content: '';
+                    width: 14px;
+                    height: 15px;
+                    bottom: 8px;
+                    left: -25px;
+                }
+            }
+
+            .create {
+                border: 1px solid #ed1c24;
+                color: #ed1c24;
+                border-radius: 10px;
+                font-size: 19px;
+                text-align: center;
+                width: 240px;
+                height: 60px;
+                margin-top: 89px;
+                margin-right: auto;
+                margin-left: auto;
+                padding: 16px 0;
+            }
+
+            .create:hover {
+                cursor: pointer;
+            }
+        }
+
+        .partner-acc {
+            box-shadow: 0px 0px 70px -30px rgba(0,0,0,0.75);
+            margin-top: 35px;
+            border-radius: 10px;
+            display: flex;
+
+            .head {
+                background-image: url(./../../../../../static/images/partnership-acc.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+                color: white;
+                text-align: center;
+                font-size: 25px;
+                padding: 50px 0;
+                width: 280px;
+                height: 240px;
+
+                p {
+                    width: 100px;
+                    margin: 52px 62px;
+                    color: white;
+                    font-size: 24px;
+                }
+            }
+
+            ul {
+                margin-top: 17px;
+
+                li {
+                    margin: 18px 75px;
+                    position: relative;
+                    font-size: 1;
+                }
+
+                li:before {
+                    position: absolute;
+                    background-image: url(./../../../../../static/images/check-purple.png);
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    content: '';
+                    width: 14px;
+                    height: 15px;
+                    bottom: 8px;
+                    left: -25px;
+                }
+            }
+            .create {
+                border: 1px solid #641bd7;
+                color: #641bd7;
+                border-radius: 10px;
+                font-size: 19px;
+                text-align: center;
+                width: 240px;
+                height: 60px;
+                margin-top: 89px;
+                margin-right: auto;
+                margin-left: auto;
+                padding: 16px 0;
+            }
+
+            .create:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .types {
+        .create-acc-main {
+            .demo-acc {
+                .head {
+                    padding: 25px 0;
+                    width: 233px;
+                    height: 200px;
+    
+                    p {
+                        margin: 35px 50px;
+                    }
+                }
+    
+                ul {
+                    margin-top: -4px;
+                    margin-bottom: 0;
+                    li {
+                        font-size: 20px;
+                    }
+                }
+    
+                .create {
+                    margin-top: 65px;
+                }
+            }
+    
+            .live-acc {
+                .head {
+                    padding: 25px 0;
+                    width: 233px;
+                    height: 200px;
+    
+                    p {
+                        margin: 35px 50px;
+                    }
+                }
+    
+                ul {
+                    margin-top: -4px;
+                    margin-bottom: 0;
+                    li {
+                        font-size: 20px;
+                    }
+                }
+    
+                .create {
+                    margin-top: 65px;
+                }
+            }
+    
+            .partner-acc {
+                .head {
+                    padding: 25px 0;
+                    width: 233px;
+                    height: 200px;
+                    
+                    p {
+                        margin: 56px 50px;
+                    }
+                }
+    
+                ul {
+                    margin-top: -4px;
+                    margin-bottom: 0;
+                    li {
+                        font-size: 20px;
+                    }
+                }
+    
+                .create {
+                    margin-top: 65px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .create-acc-main {
+        display: none;
+    }
+
+    .types {
+        .create-acc {
+    margin-top: 100px;
+    display: block;
+
+    .demo {
+        height: 480px;
+        width: 320px;
+        box-shadow: 0px 0px 70px -30px rgba(0,0,0,0.75);
+        margin-top: 45px;
+        border-radius: 10px;
+        margin-left: auto;
+        margin-right: auto;
+
+        .head {
+            background-image: url(./../../../../../static/images/demo.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: #2291e6;
+            text-align: center;
+            font-size: 30px;
+            padding: 50px 0;
+            width: 321px;
+            height: 149px;
+
+            p {
+                font-size: 21px;
+                margin-top: 10px;
+                color: #2291e6;
+            }
+        }
+        
+        ul {
+            margin-top: 50px;
+
+            li {
+                margin: 16px 44px;
+                position: relative;
+            }
+
+            li:before {
+                position: absolute;
+                background-image: url(./../../../../../static/images/check-blue.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+                content: '';
+                width: 14px;
+                height: 15px;
+                bottom: 4px;
+                left: -25px;
+            }
+        }
+
+        .create {
+            border: 1px solid #2291e6;
+            color: #2291e6;
+            border-radius: 3px;
+            font-size: 16px;
+            text-align: center;
+            width: 200px;
+            height: 40px;
+            margin-top: 76px;
+            margin-right: auto;
+            margin-left: auto;
+            padding: 8px 0;
+        }
+
+        .create:hover {
+            cursor: pointer;
+        }
+    }
+
+    .live {
+        height: 480px;
+        width: 320px;
+        box-shadow: 0px 0px 70px -30px rgba(0,0,0,0.75);
+        margin-top: 45px;
+        border-radius: 10px;
+        margin-left: auto;
+        margin-right: auto;
+
+        .head {
+            background-image: url(./../../../../../static/images/live.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: #f04c53;
+            text-align: center;
+            font-size: 30px;
+            padding: 50px 0;
+            width: 321px;
+            height: 149px;
+
+            p {
+                font-size: 21px;
+                margin-top: 10px;
+                color: #f04c53;
+            }
+        }
+
+        ul {
+            margin-top: 50px;
+
+            li {
+                margin: 16px 44px;
+                position: relative;
+            }
+
+            li:before {
+                position: absolute;
+                background-image: url(./../../../../../static/images/check-red.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+                content: '';
+                width: 14px;
+                height: 15px;
+                bottom: 4px;
+                left: -25px;
+            }
+        }
+
+        .create {
+            border: 1px solid #ed1c24;
+            color: #ed1c24;
+            border-radius: 3px;
+            font-size: 16px;
+            text-align: center;
+            width: 200px;
+            height: 40px;
+            margin-top: 76px;
+            margin-right: auto;
+            margin-left: auto;
+            padding: 8px 0;
+        }
+
+        .create:hover {
+            cursor: pointer;
+        }
+    }
+
+    .partner {
+        height: 480px;
+        width: 320px;
+        box-shadow: 0px 0px 70px -30px rgba(0,0,0,0.75);
+        margin-top: 45px;
+        border-radius: 10px;
+        margin-left: auto;
+        margin-right: auto;
+
+        .head {
+            background-image: url(./../../../../../static/images/partnership.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: #641bd7;
+            text-align: center;
+            font-size: 30px;
+            padding: 50px 0;
+            width: 321px;
+            height: 149px;
+
+            p {
+                font-size: 21px;
+                margin-top: 10px;
+                color: #641bd7;
+            }
+        }
+
+        ul {
+            margin-top: 50px;
+
+            li {
+                margin: 16px 44px;
+                position: relative;
+            }
+
+            li:before {
+                position: absolute;
+                background-image: url(./../../../../../static/images/check-purple.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+                content: '';
+                width: 14px;
+                height: 15px;
+                bottom: 4px;
+                left: -25px;
+            }
+        }
+        .create {
+            border: 1px solid #641bd7;
+            color: #641bd7;
+            border-radius: 3px;
+            font-size: 16px;
+            text-align: center;
+            width: 200px;
+            height: 40px;
+            margin-top: 76px;
+            margin-right: auto;
+            margin-left: auto;
+            padding: 8px 0;
+        }
+
+        .create:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .types {
+        margin-top: 80px;
+    }
+}
