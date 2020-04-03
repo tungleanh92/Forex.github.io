@@ -23,6 +23,8 @@ const Login = () => {
     const [state, dispatch] = useReducer(reducer, initialState)
 
     useEffect(() => {
+        console.log(1);
+
         let spin1 = document.getElementsByClassName('poly-wrap-acc').length;
         let myInterval1 = setInterval(function () {
             for (let i = 0; i < 2; i++) {

@@ -72,38 +72,6 @@ const Main = ({ history }) => {
             <Route children={({ history }) => <Header history={history} />} />
 
             <div className={`${(history.location.pathname === "/about" || history.location.pathname === "/trading") ? "" : "func"} main`}>
-                {/* {
-                    history.location.pathname !== "/login" && history.location.pathname !== "/signup" ?
-                        <>
-                            <span className="poly-wrap">
-                                <span className="poly">
-                                </span>
-                            </span>
-                            <span className="poly-wrap">
-                                <span className="poly">
-                                </span>
-                            </span>
-                            <span className="poly-wrap">
-                                <span className="poly">
-                                </span>
-                            </span>
-                            <span className="poly-wrap">
-                                <span className="poly">
-                                </span>
-                            </span>
-                        </>
-                        :
-                        <>
-                            <span className="poly-wrap-acc">
-                                <span className="poly-acc">
-                                </span>
-                            </span>
-                            <span className="poly-wrap-acc">
-                                <span className="poly-acc">
-                                </span>
-                            </span>
-                        </>
-                } */}
 
                 <Switch>
                     <Route exact path="/">

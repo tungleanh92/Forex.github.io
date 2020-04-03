@@ -30,7 +30,11 @@ const Signup = () => {
         initialState.checked = !initialState.checked
     }
     useEffect(() => {
+        console.log(1);
+
         let spin1 = document.getElementsByClassName('poly-wrap-acc').length;
+        console.log(spin1);
+
         let myInterval1 = setInterval(function () {
             for (let i = 0; i < 2; i++) {
                 document.getElementsByClassName('poly-acc')[i].classList.remove("spin");

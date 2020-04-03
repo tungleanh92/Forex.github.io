@@ -37,12 +37,16 @@ const About = () => {
 
     useEffect(() => {
         let spin2 = document.getElementsByClassName('poly-wrap').length;
+        console.log(spin2);
+
         let myInterval2 = setInterval(function () {
             for (let i = 0; i < 4; i++) {
                 document.getElementsByClassName('poly')[i].classList.remove("spin");
             }
 
             let x2 = Math.floor((Math.random() * spin2));
+            console.log(x2);
+
             let polywrap2 = document.getElementsByClassName('poly-wrap')[x2].children[0];
             polywrap2.classList.add("spin");
         }, 10000);
