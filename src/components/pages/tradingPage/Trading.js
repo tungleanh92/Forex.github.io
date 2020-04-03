@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BsTab } from "@basesShared";
 import './../../../styles/less/tool.less'
 import './../../../styles/less/pages/module/Trading.less'
 import Accounts from './Accounts'
 import Meta from './Meta'
 import Range from './Range'
+import './../../../styles/less/pages/index.less'
 
 
 var tabDemo = [
@@ -22,9 +23,41 @@ var tabDemo = [
     }
 ];
 const Trading = () => {
+    useEffect(() => {
+        let spin2 = document.getElementsByClassName('poly-wrap').length;
+        let myInterval2 = setInterval(function () {
+            for (let i = 0; i < 4; i++) {
+                document.getElementsByClassName('poly')[i].classList.remove("spin");
+            }
+
+            let x2 = Math.floor((Math.random() * spin2));
+            let polywrap2 = document.getElementsByClassName('poly-wrap')[x2].children[0];
+            polywrap2.classList.add("spin");
+        }, 10000);
+
+        return () => {
+            clearInterval(myInterval2);
+        }
+    }, [])
     return (
         <>
             <div className="section-trading">
+                <span className="poly-wrap">
+                    <span className="poly">
+                    </span>
+                </span>
+                <span className="poly-wrap">
+                    <span className="poly">
+                    </span>
+                </span>
+                <span className="poly-wrap">
+                    <span className="poly">
+                    </span>
+                </span>
+                <span className="poly-wrap">
+                    <span className="poly">
+                    </span>
+                </span>
                 <div className="bs-container">
                     <div className="bs-row row-center row-md-5">
                         <div className="bs-col md-50-5">

@@ -1,6 +1,7 @@
-import React, { useReducer } from 'react'
+import React, { useReducer, useEffect } from 'react'
 import './../../../styles/less/tool.less'
 import './../../../styles/less/pages/module/Signup.less'
+import './../../../styles/less/pages/index.less'
 
 const reducer = (state, action) => {
     switch (action.type) {
@@ -28,12 +29,33 @@ const Signup = () => {
     const handleCheck = () => {
         initialState.checked = !initialState.checked
     }
+    useEffect(() => {
+        let spin1 = document.getElementsByClassName('poly-wrap-acc').length;
+        let myInterval1 = setInterval(function () {
+            for (let i = 0; i < 2; i++) {
+                document.getElementsByClassName('poly-acc')[i].classList.remove("spin");
+            }
 
-    console.log(typeof (state.region));
+            let x1 = Math.floor((Math.random() * spin1));
+            let polywrap1 = document.getElementsByClassName('poly-wrap-acc')[x1].children[0];
+            polywrap1.classList.add("spin");
+        }, 10000);
 
+        return () => {
+            clearInterval(myInterval1);
+        }
+    }, [])
 
     return (
         <div className="signuppage">
+            <span className="poly-wrap-acc">
+                <span className="poly-acc">
+                </span>
+            </span>
+            <span className="poly-wrap-acc">
+                <span className="poly-acc">
+                </span>
+            </span>
             <form>
                 <input
                     placeholder="Country / Region of resident"
