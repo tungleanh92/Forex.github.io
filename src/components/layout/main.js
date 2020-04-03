@@ -1,18 +1,15 @@
-import React, { useState, useReducer, useEffect } from 'react'
-import Upline from './Upline'
-import Downline from './Downline'
+import React, { useEffect, useReducer, useState } from 'react'
+import { Route, Switch } from 'react-router-dom'
 import About from '../pages/aboutPage/About'
 import Home from '../pages/homePage/Home'
-import Trading from '../pages/tradingPage/Trading'
-import './../../styles/less/tool.less'
-import './../../styles/less/pages/index.less'
-import {
-    Link, BrowserRouter as Router,
-    Switch, Route, useRouteMatch, useHistory, useLocation
-} from 'react-router-dom';
-import Header from './Header'
 import Login from '../pages/manageAcc/Login'
 import Signup from '../pages/manageAcc/Signup'
+import Trading from '../pages/tradingPage/Trading'
+import './../../styles/less/pages/index.less'
+import './../../styles/less/tool.less'
+import Downline from './Downline'
+import Header from './Header'
+import Upline from './Upline'
 
 const reducer = (state, action) => {
     switch (action.type) {
