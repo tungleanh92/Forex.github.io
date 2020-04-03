@@ -42,7 +42,7 @@ const Login = () => {
     }, [])
 
     return (
-        <div className="loginpage">
+        <div className="section-login">
             <span className="poly-wrap-acc">
                 <span className="poly-acc">
                 </span>

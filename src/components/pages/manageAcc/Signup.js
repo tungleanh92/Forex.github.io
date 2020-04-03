@@ -52,7 +52,7 @@ const Signup = () => {
     }, [])
 
     return (
-        <div className="signuppage">
+        <div className="section-signup">
             <span className="poly-wrap-acc">
                 <span className="poly-acc">
                 </span>
