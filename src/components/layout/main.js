@@ -13,8 +13,6 @@ import {
 import Header from './Header'
 import Login from '../pages/manageAcc/Login'
 import Signup from '../pages/manageAcc/Signup'
-import Poly from './../pages/homePage/Poly'
-import Polyacc from './../pages/homePage/Polyacc'
 
 const reducer = (state, action) => {
     switch (action.type) {
@@ -70,14 +68,82 @@ const Main = ({ history }) => {
     }
     const [state, dispatch] = useReducer(reducer, initialState)
 
+    useEffect(() => {
+        let spin = document.getElementsByClassName('poly-wrap-acc').length;
+
+        let myInterval = setInterval(function () {
+            document.getElementsByClassName('poly-acc')[0].classList.remove("spin");
+            document.getElementsByClassName('poly-acc')[1].classList.remove("spin");
+
+            let x = Math.floor((Math.random() * spin));
+            let polywrap = document.getElementsByClassName('poly-wrap-acc')[x].children[0];
+            polywrap.classList.add("spin");
+        }, 10000);
+
+        return () => {
+            clearInterval(myInterval);
+        }
+    })
+
+    useEffect(() => {
+        let spin = document.getElementsByClassName('poly-wrap').length;
+
+        let myInterval = setInterval(function () {
+            console.log(document.getElementsByClassName('poly')[0].classList);
+
+            document.getElementsByClassName('poly')[0].classList.remove("spin");
+            document.getElementsByClassName('poly')[1].classList.remove("spin");
+            document.getElementsByClassName('poly')[2].classList.remove("spin");
+            document.getElementsByClassName('poly')[3].classList.remove("spin");
+
+            let x = Math.floor((Math.random() * spin));
+            let polywrap = document.getElementsByClassName('poly-wrap')[x].children[0];
+            polywrap.classList.add("spin");
+        }, 10000);
+
+        return () => {
+            clearInterval(myInterval);
+        }
+    })
+
     return (
         <>
             <Upline />
+
             <Route children={({ history }) => <Header history={history} />} />
+
             <div className={`${(history.location.pathname === "/about" || history.location.pathname === "/trading") ? "" : "func"} main`}>
                 {
                     history.location.pathname !== "/login" && history.location.pathname !== "/signup" ?
-                        <Poly /> : <Polyacc />
+                        <>
+                            <span className="poly-wrap">
+                                <span className="poly">
+                                </span>
+                            </span>
+                            <span className="poly-wrap">
+                                <span className="poly">
+                                </span>
+                            </span>
+                            <span className="poly-wrap">
+                                <span className="poly">
+                                </span>
+                            </span>
+                            <span className="poly-wrap">
+                                <span className="poly">
+                                </span>
+                            </span>
+                        </>
+                        :
+                        <>
+                            <span className="poly-wrap-acc">
+                                <span className="poly-acc">
+                                </span>
+                            </span>
+                            <span className="poly-wrap-acc">
+                                <span className="poly-acc">
+                                </span>
+                            </span>
+                        </>
                 }
 
                 <Switch>
@@ -167,7 +233,6 @@ const Main = ({ history }) => {
                         <p>Livechat</p>
                     </div>
                 </div>
-
 
                 {
                     history.location.pathname !== "/login" && history.location.pathname !== "/signup" ?
