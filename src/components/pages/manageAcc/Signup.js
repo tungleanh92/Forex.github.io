@@ -61,50 +61,52 @@ const Signup = () => {
                 <span className="poly-acc">
                 </span>
             </span>
-            <form>
-                <input
-                    placeholder="Country / Region of resident"
-                    name="region"
-                    type="text"
-                    className="txt"
-                    required="required"
-                    value={state.region}
-                    onChange={(event) => dispatch({ type: "change_region", value: event.target.value })} />
-
-                <input
-                    placeholder="Your email address"
-                    name="email"
-                    type="email"
-                    className="txt"
-                    required="required"
-                    value={state.email}
-                    onChange={(event) => dispatch({ type: "change_email", value: event.target.value })} />
-
-                <input
-                    placeholder="Choose a password"
-                    name="password"
-                    type="password"
-                    className="txt"
-                    required="required"
-                    value={state.password}
-                    onChange={(event) => dispatch({ type: "change_password", value: event.target.value })} />
-
-                <label className="container">
+            <div className="bs-container">
+                <form>
                     <input
-                        type="checkbox"
-                        name="check"
-                        onBlur={() => handleCheck()}
-                        defaultChecked={initialState.checked} />
-                    <span className="checkmark"></span>
+                        placeholder="Country / Region of resident"
+                        name="region"
+                        type="text"
+                        className="txt"
+                        required="required"
+                        value={state.region}
+                        onChange={(event) => dispatch({ type: "change_region", value: event.target.value })} />
+
+                    <input
+                        placeholder="Your email address"
+                        name="email"
+                        type="email"
+                        className="txt"
+                        required="required"
+                        value={state.email}
+                        onChange={(event) => dispatch({ type: "change_email", value: event.target.value })} />
+
+                    <input
+                        placeholder="Choose a password"
+                        name="password"
+                        type="password"
+                        className="txt"
+                        required="required"
+                        value={state.password}
+                        onChange={(event) => dispatch({ type: "change_password", value: event.target.value })} />
+
+                    <label className="container">
+                        <input
+                            type="checkbox"
+                            name="check"
+                            onBlur={() => handleCheck()}
+                            defaultChecked={initialState.checked} />
+                        <span className="checkmark"></span>
                     I agree to ceceive news & analytics
                 </label>
 
-                <button type="submit">Continue</button>
+                    <button type="submit">Continue</button>
 
-                <p>By clicking Continue you confirm that you have read, understood, and agree with all the information in the <span><a href="">Client Agreement</a></span> and the service terms and conditions listed in the following documents: <span><a href="">General Business Terms</a></span> and <span><a href="">Partnership Agreement</a></span></p>
-            </form>
+                    <p>By clicking Continue you confirm that you have read, understood, and agree with all the information in the <span><a href="">Client Agreement</a></span> and the service terms and conditions listed in the following documents: <span><a href="">General Business Terms</a></span> and <span><a href="">Partnership Agreement</a></span></p>
+                </form>
 
-            <p>Already have an account? <a href="">Sign In Now</a></p>
+                <p>Already have an account? <a href="">Sign In Now</a></p>
+            </div>
         </div>
     )
 }

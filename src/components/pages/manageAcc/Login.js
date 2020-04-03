@@ -51,29 +51,31 @@ const Login = () => {
                 <span className="poly-acc">
                 </span>
             </span>
-            <form>
-                <input
-                    placeholder="Your Email"
-                    type="email"
-                    name="email"
-                    className="txt"
-                    required="required"
-                    value={state.email}
-                    onChange={(event) => dispatch({ type: "change_email", value: event.target.value })} />
+            <div className="bs-container">
+                <form>
+                    <input
+                        placeholder="Your Email"
+                        type="email"
+                        name="email"
+                        className="txt"
+                        required="required"
+                        value={state.email}
+                        onChange={(event) => dispatch({ type: "change_email", value: event.target.value })} />
 
-                <input
-                    placeholder="Password"
-                    type="password"
-                    name="password"
-                    className="txt"
-                    required="required"
-                    value={state.password}
-                    onChange={(event) => dispatch({ type: "change_password", value: event.target.value })} />
+                    <input
+                        placeholder="Password"
+                        type="password"
+                        name="password"
+                        className="txt"
+                        required="required"
+                        value={state.password}
+                        onChange={(event) => dispatch({ type: "change_password", value: event.target.value })} />
 
-                <button type="submit">Continue</button>
-                <a href="">Forgot password?</a>
-            </form>
-            <p>New to HYMC? <a href="">Create on account</a></p>
+                    <button type="submit">Continue</button>
+                    <a href="">Forgot password?</a>
+                </form>
+                <p>New to HYMC? <a href="">Create on account</a></p>
+            </div>
         </div>
     )
 }
