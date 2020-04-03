@@ -7,8 +7,6 @@ import Reasons from './Reasons'
 import Licences from './Licences'
 import Deposit from './Deposit'
 import Contact from './Contact'
-import './../../../styles/less/pages/index.less'
-
 
 var tabDemo = [
     {
@@ -40,7 +38,7 @@ const About = () => {
         console.log(spin2);
 
         let myInterval2 = setInterval(function () {
-            for (let i = 0; i < 4; i++) {
+            for (let i = 0; i < 3; i++) {
                 document.getElementsByClassName('poly')[i].classList.remove("spin");
             }
 
@@ -59,10 +57,6 @@ const About = () => {
     return (
         <>
             <div className="section-about">
-                <span className="poly-wrap">
-                    <span className="poly">
-                    </span>
-                </span>
                 <span className="poly-wrap">
                     <span className="poly">
                     </span>

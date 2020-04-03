@@ -5,8 +5,6 @@ import './../../../styles/less/pages/module/Trading.less'
 import Accounts from './Accounts'
 import Meta from './Meta'
 import Range from './Range'
-import './../../../styles/less/pages/index.less'
-
 
 var tabDemo = [
     {
@@ -26,7 +24,7 @@ const Trading = () => {
     useEffect(() => {
         let spin2 = document.getElementsByClassName('poly-wrap').length;
         let myInterval2 = setInterval(function () {
-            for (let i = 0; i < 4; i++) {
+            for (let i = 0; i < 3; i++) {
                 document.getElementsByClassName('poly')[i].classList.remove("spin");
             }
 
@@ -39,13 +37,10 @@ const Trading = () => {
             clearInterval(myInterval2);
         }
     }, [])
+
     return (
         <>
             <div className="section-trading">
-                <span className="poly-wrap">
-                    <span className="poly">
-                    </span>
-                </span>
                 <span className="poly-wrap">
                     <span className="poly">
                     </span>

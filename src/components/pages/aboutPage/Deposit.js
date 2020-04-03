@@ -5,6 +5,10 @@ import './../../../styles/less/pages/module/Deposit.less'
 const Deposit = () => {
     return (
         <div className="deposits">
+            <span className="poly-wrap-dp">
+                <span className="poly-dp spin">
+                </span>
+            </span>
             <h2>Deposits and withdrawals</h2>
             <p>Fast and hassle-free deposit and withdrawal transaction with HYMC</p>
             <div className="bs-row row-center row-lg-15">

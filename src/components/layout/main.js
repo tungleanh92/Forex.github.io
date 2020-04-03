@@ -58,11 +58,15 @@ const Main = ({ history }) => {
     const [mess, setMess] = useState(initialMess)
 
     function openMess() {
+        console.log(1);
+
         setMess(initialMess = 1);
     }
+
     function closeMess() {
         setMess(initialMess = 0);
     }
+
     const [state, dispatch] = useReducer(reducer, initialState)
 
     return (

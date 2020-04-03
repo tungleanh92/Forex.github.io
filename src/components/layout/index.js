@@ -21,11 +21,11 @@ import AboutPage from '../pages/aboutPage'
 
 const Layout = () => {
     return (
-        <> 
+        <>
             <Router>
-                <Route children={({history}) => <Main history={history}/>} />  
+                <Route children={({ history }) => <Main history={history} />} />
+                <Route children={({ history }) => <Footer history={history} />} />
             </Router>
-            <Footer />
         </>
     )
 }

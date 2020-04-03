@@ -9,6 +9,49 @@
 }
 
 .types {
+    .poly-wrap-types {
+        .spin {
+            animation-name: spin;
+            animation-duration: 7000ms;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear; 
+          }
+    }
+      
+      @keyframes spin {
+        from {transform:rotate(0deg);}
+          to {transform:rotate(360deg);}
+      }
+
+    .poly-wrap-types:nth-child(1) {
+        filter: drop-shadow(0px 0px 10px rgba(0,0,0,0.4));
+
+        .poly-types {
+            background: white;
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            position: absolute;
+            transform: rotate(110deg);
+            left: -275px;
+            top: 755px;
+            width: 200px;
+            height: 240px;
+        }
+    }
+
+    .poly-wrap-types:nth-child(2) {
+        filter: drop-shadow(0px 0px 10px rgba(0,0,0,0.4));
+
+        .poly-types {
+            background: white;
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            position: absolute;
+            transform: rotate(14deg);
+            left: 805px;
+            top: 740px;
+            width: 500px;
+            height: 580px;
+          }
+    }
     margin-top: 1;
 
     h2 {
@@ -32,6 +75,8 @@
             margin-top: 160px;
             border-radius: 10px;
             display: flex;
+            position: relative;
+            background-color: white;
 
             .head {
                 background-image: url(./../../../../../static/images/demo-acc.png);
@@ -98,6 +143,8 @@
             margin-top: 20px;
             border-radius: 10px;
             display: flex;
+            position: relative;
+            background-color: white;
 
             .head {
                 background-image: url(./../../../../../static/images/live-acc.png);
@@ -124,7 +171,7 @@
                 li {
                     margin: 18px 75px;
                     position: relative;
-                    font-size: 1;
+                    font-size: 21px;
                 }
 
                 li:before {
@@ -164,6 +211,8 @@
             margin-top: 35px;
             border-radius: 10px;
             display: flex;
+            position: relative;
+            background-color: white;
 
             .head {
                 background-image: url(./../../../../../static/images/partnership-acc.png);
@@ -190,7 +239,7 @@
                 li {
                     margin: 18px 75px;
                     position: relative;
-                    font-size: 1;
+                    font-size: 21px;
                 }
 
                 li:before {

@@ -1,10 +1,34 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './../../../styles/less/tool.less'
 import './../../../styles/less/pages/module/Reasons.less'
 
 const Reasons = () => {
+    useEffect(() => {
+        let spin1 = document.getElementsByClassName('poly-wrap-rs').length;
+        let myInterval1 = setInterval(function () {
+            for (let i = 0; i < 2; i++) {
+                document.getElementsByClassName('poly-rs')[i].classList.remove("spin");
+            }
+
+            let x1 = Math.floor((Math.random() * spin1));
+            let polywrap2 = document.getElementsByClassName('poly-wrap-rs')[x1].children[0];
+            polywrap2.classList.add("spin");
+        }, 10000);
+
+        return () => {
+            clearInterval(myInterval1);
+        }
+    }, [])
     return (
         <div className="reason">
+            <span className="poly-wrap-rs">
+                <span className="poly-rs">
+                </span>
+            </span>
+            <span className="poly-wrap-rs">
+                <span className="poly-rs">
+                </span>
+            </span>
             <h2>Why choose us?</h2>
             <p>HYMC LTD.is a limited liability company regulated as a Securities Dealer by the Seychelles Financial Services Authority of Seychelles (“FSA”) with license number SD013 to carry out certain categories of financial investment business as permitted under the Seychelles Securities Act 2007.</p>
             <div className="reason-cnt">

@@ -5,7 +5,11 @@ import './../../../styles/less/pages/module/Contact.less'
 const Contact = () => {
     return (
         <div className="contact">
-            <h2>Contact Us</h2>
+            <span className="poly-wrap-lc">
+                <span className="poly-lc spin">
+                </span>
+            </span>
+            <h2>Contact us</h2>
             <div className="bs-row row-center row-xs-5">
                 <div className="bs-col xs-33-5">
                     <div className="wrap">
@@ -29,7 +33,7 @@ const Contact = () => {
                 </div>
             </div>
         </div>
-        
+
     )
 }
 

@@ -11,6 +11,7 @@
         margin-top: 37px;
         color: #ec1b24;
         letter-spacing: -0.5px;
+        position: relative;
     }
 
     p {
@@ -20,6 +21,7 @@
         line-height: 26px;
         color: #4d4d4d;
         width: 500px;
+        position: relative;
     }
 
     ul {
@@ -333,6 +335,51 @@
 }
 
 .section-platform {
+
+    .poly-wrap-pl {
+        .spin {
+            animation-name: spin;
+            animation-duration: 7000ms;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear; 
+          }
+    }
+      
+      @keyframes spin {
+        from {transform:rotate(0deg);}
+          to {transform:rotate(360deg);}
+      }
+
+    .poly-wrap-pl:nth-child(1) {
+        filter: drop-shadow(0px 0px 10px rgba(0,0,0,0.4));
+
+        .poly-pl {
+            background: white;
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            position: absolute;
+            transform: rotate(110deg);
+            left: -780px;
+            top: 40px;
+            width: 200px;
+            height: 240px;
+        }
+    }
+
+    .poly-wrap-pl:nth-child(2) {
+        filter: drop-shadow(0px 0px 10px rgba(0,0,0,0.4));
+
+        .poly-pl {
+            background: white;
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            position: absolute;
+            transform: rotate(14deg);
+            left: 245px;
+            top: 20px;
+            width: 500px;
+            height: 580px;
+          }
+    }
+
     margin-top: 230px;
     text-align: center;
 
@@ -388,6 +435,7 @@
     }
 
     .meta-cnt {
+        position: relative;
         h2 {
             text-align: left;  
             font-size: 33px;
@@ -435,6 +483,7 @@
     }
 
     .pf-img {
+        position: relative;
         max-width:522px;
         margin-left: auto;
         margin-right: auto;

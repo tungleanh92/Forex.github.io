@@ -1,10 +1,34 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './../../../styles/less/tool.less'
 import './../../../styles/less/pages/module/Meta.less'
 
 const Meta = () => {
+    useEffect(() => {
+        let spin1 = document.getElementsByClassName('poly-wrap-meta').length;
+        let myInterval1 = setInterval(function () {
+            for (let i = 0; i < 2; i++) {
+                document.getElementsByClassName('poly-meta')[i].classList.remove("spin");
+            }
+
+            let x1 = Math.floor((Math.random() * spin1));
+            let polywrap2 = document.getElementsByClassName('poly-wrap-meta')[x1].children[0];
+            polywrap2.classList.add("spin");
+        }, 10000);
+
+        return () => {
+            clearInterval(myInterval1);
+        }
+    }, [])
     return (
         <div className="metatrader">
+            <span className="poly-wrap-meta">
+                <span className="poly-meta">
+                </span>
+            </span>
+            <span className="poly-wrap-meta">
+                <span className="poly-meta">
+                </span>
+            </span>
             <div className="meta-grp">
                 <h2>MetaTrader 5</h2>
                 <div className="btn-grp">

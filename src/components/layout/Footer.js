@@ -1,14 +1,22 @@
 import React from 'react';
 import './../../styles/less/tool.less'
 import './../../styles/less/pages.less'
+import './../../styles/less/pages/index.less'
 
-const Footer = () => {
+const Footer = ({ history }) => {
     return (
         <div className="Footer">
-            <span className="poly-wrap-footer">
-                <span className="poly">
-                </span>
-            </span>
+            {
+                history.location.pathname !== "/login" && history.location.pathname !== "/signup" ?
+                    <>
+                        <span className="poly-wrap-footer">
+                            <span className="poly spin">
+                            </span>
+                        </span>
+                    </>
+                    :
+                    <></>
+            }
             <div className="bs-container">
                 <div className="bs-row">
                     <div className="part1">
