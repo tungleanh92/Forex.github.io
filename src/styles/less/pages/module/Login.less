@@ -2,6 +2,19 @@
     position: relative;
     margin-top: -25px;
     margin-bottom: 140px;
+    .poly-wrap-acc {
+        .spin {
+            animation-name: spin;
+            animation-duration: 7000ms;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear; 
+          }
+    }
+      
+      @keyframes spin {
+        from {transform:rotate(0deg);}
+          to {transform:rotate(360deg);}
+      }
 
     p {
         text-align: center;

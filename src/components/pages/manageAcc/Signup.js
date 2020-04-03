@@ -1,7 +1,6 @@
 import React, { useReducer, useEffect } from 'react'
 import './../../../styles/less/tool.less'
 import './../../../styles/less/pages/module/Signup.less'
-import './../../../styles/less/pages/index.less'
 
 const reducer = (state, action) => {
     switch (action.type) {
@@ -43,6 +42,8 @@ const Signup = () => {
             let x1 = Math.floor((Math.random() * spin1));
             let polywrap1 = document.getElementsByClassName('poly-wrap-acc')[x1].children[0];
             polywrap1.classList.add("spin");
+            console.log(polywrap1.classList);
+
         }, 10000);
 
         return () => {
